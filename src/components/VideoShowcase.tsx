@@ -35,7 +35,7 @@ const VideoShowcase = () => {
           <div className="text-center mb-12">
             <span
               className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-wider uppercase mb-4"
-              style={{ background: "rgba(180,120,0,0.12)", border: "1px solid rgba(180,120,0,0.28)", color: "hsl(36,70%,30%)" }}
+              style={{ background: "#e0a11d", color: "white", border: "none" }}
             >
               Virtual Tour
             </span>

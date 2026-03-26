@@ -28,7 +28,7 @@ const LocationSection = () => {
         <div className="text-center mb-12">
           <span
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-wider uppercase mb-4"
-            style={{ background: "rgba(180,120,0,0.12)", border: "1px solid rgba(180,120,0,0.28)", color: "hsl(36,70%,30%)" }}
+            style={{ background: "#e0a11d", color: "white", border: "none" }}
           >
             Find Us
           </span>
@@ -55,14 +55,15 @@ const LocationSection = () => {
           {/* Info */}
           <div className="flex flex-col justify-center">
             <div
-              className="rounded-2xl p-8 mb-6"
+              className="rounded-2xl p-8 mb-6 transition-all hover:shadow-xl group relative overflow-hidden"
               style={{
-                background: "rgba(255,248,220,0.70)",
-                backdropFilter: "blur(8px)",
-                border: "1px solid rgba(212,175,55,0.30)",
-                boxShadow: "0 2px 16px rgba(180,130,0,0.10)",
+                background: "rgba(255, 252, 248, 0.75)", // Blemish white
+                backdropFilter: "blur(12px)",
+                border: "1px solid rgba(255,255,255,0.8)",
+                boxShadow: "0 4px 20px rgba(180,130,0,0.06)",
               }}
             >
+              <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
               <div className="flex items-start gap-4 mb-6">
                 <MapPin className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: "hsl(36,75%,38%)" }} />
                 <div>

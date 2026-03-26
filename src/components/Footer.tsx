@@ -15,12 +15,13 @@ const Footer = () => {
       {/* Floating golden spark particles */}
       <SectionParticles />
 
-      {/* Radial amber glow */}
+      {/* Radial amber glow & Dark Vignette */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
             "radial-gradient(ellipse at 50% 30%, rgba(212,175,55,0.22) 0%, transparent 65%)",
+          boxShadow: "inset 0 0 150px rgba(0,0,0,0.35)",  // Re-keeping the requested vignette
           zIndex: 1,
         }}
       />

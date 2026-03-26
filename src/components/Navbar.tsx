@@ -125,9 +125,9 @@ const Navbar = () => {
               href="#booking"
               className="px-5 py-2 rounded-full text-sm font-bold transition-all hover:scale-105 hover:brightness-110"
               style={{
-                background: "linear-gradient(135deg,hsl(43,90%,55%) 0%,hsl(36,85%,40%) 100%)",
+                background: "#e0a11d",
                 color: "#1c0e00",
-                boxShadow: "0 3px 14px rgba(212,160,0,0.40)",
+                boxShadow: "0 3px 14px rgba(224,161,29,0.40)",
               }}
             >
               Book Now
@@ -172,7 +172,7 @@ const Navbar = () => {
             onClick={() => setMobileOpen(false)}
             className="block mt-3 px-6 py-3 rounded-full text-sm font-bold text-center"
             style={{
-              background: "linear-gradient(135deg,hsl(43,90%,55%) 0%,hsl(36,85%,40%) 100%)",
+              background: "#e0a11d",
               color: "#1c0e00",
             }}
           >

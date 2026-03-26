@@ -26,18 +26,20 @@ const FacilitiesSection = () => {
       id="facilities"
       className="section-padding relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, hsl(43,65%,92%) 0%, hsl(38,55%,86%) 50%, hsl(45,70%,90%) 100%)",
+        background: "linear-gradient(180deg, hsl(30, 20%, 8%) 0%, hsl(24, 25%, 5%) 100%)",
       }}
     >
-      {/* Floating golden sparks */}
-      <SectionParticles />
+      {/* Subtle sparks with low opacity for dark theme */}
+      <div className="opacity-30">
+        <SectionParticles />
+      </div>
 
-      {/* Subtle radial glow in centre */}
+      {/* Premium Radial Gold Center Glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 60%, rgba(212,175,55,0.18) 0%, transparent 70%)",
+            "radial-gradient(circle at 50% 50%, rgba(224, 161, 29, 0.12) 0%, transparent 70%)",
           zIndex: 1,
         }}
       />
@@ -45,50 +47,60 @@ const FacilitiesSection = () => {
       <div className="container mx-auto relative" style={{ zIndex: 2 }} ref={ref}>
         <div className="text-center mb-16">
           <span
-            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-wider uppercase mb-4"
+            className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-[0.2em] uppercase mb-4 shadow-lg shadow-amber-900/20"
             style={{
-              background: "rgba(180,120,0,0.12)",
-              border: "1px solid rgba(180,120,0,0.30)",
-              color: "hsl(36,70%,30%)",
+              background: "#e0a11d",
+              color: "black",
+              border: "none",
             }}
           >
             World-Class Amenities
           </span>
-          <h2 className="section-title" style={{ color: "hsl(30,40%,15%)" }}>
+          <h2 className="section-title text-white">
             Luxury <span className="text-gradient-gold">Facilities</span>
           </h2>
-          <p className="section-subtitle mt-4" style={{ color: "hsl(30,25%,35%)" }}>
+          <p className="section-subtitle mt-4 max-w-2xl mx-auto text-white/60 leading-relaxed">
             Everything you need for a flawless event, from premium stays to state-of-the-art equipment
           </p>
+          <div className="w-20 h-1 bg-gradient-to-r from-transparent via-[#e0a11d] to-transparent mx-auto mt-8 opacity-50" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-8">
           {facilities.map((item, i) => (
             <div
               key={item.title}
-              className={`group relative overflow-hidden rounded-2xl p-5 md:p-6 text-center glow-card transition-all hover:-translate-y-1 hover:shadow-xl ${
+              className={`group relative overflow-hidden rounded-[2rem] p-6 md:p-8 text-center transition-all duration-500 hover:-translate-y-2 ${
                 isVisible ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{
-                animationDelay: `${i * 80}ms`,
+                animationDelay: `${i * 70}ms`,
                 animationFillMode: "forwards",
-                background: "rgba(255, 252, 248, 0.75)", // Blemish white
+                background: "rgba(255, 252, 248, 0.95)", // Solid ivory/blemish white
                 backdropFilter: "blur(12px)",
-                border: "1px solid rgba(255,255,255,0.8)",
-                boxShadow: "0 4px 20px rgba(180,130,0,0.06)",
+                border: "1.5px solid rgba(224, 161, 29, 0.3)",
+                boxShadow: "0 15px 45px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.8)",
               }}
             >
-              <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
+              {/* Hover Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e0a11d]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Bottom Animated Border */}
+              <div className="absolute left-1/4 right-1/4 bottom-0 h-1 bg-[#e0a11d] origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out rounded-t-full shadow-[0_0_15px_#e0a11d]" />
+
               <div
-                className="w-12 h-12 mx-auto rounded-xl flex items-center justify-center mb-4 transition-colors group-hover:scale-110"
-                style={{ background: "rgba(212,175,55,0.15)" }}
+                className="w-14 h-14 mx-auto rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110 shadow-md"
+                style={{ 
+                  background: "rgba(224, 161, 29, 0.1)",
+                  border: "1px solid rgba(224, 161, 29, 0.2)"
+                }}
               >
-                <item.icon className="w-6 h-6" style={{ color: "hsl(36,80%,35%)" }} />
+                <item.icon className="w-7 h-7" style={{ color: "#e0a11d" }} />
               </div>
-              <h3 className="font-semibold text-sm md:text-base mb-1" style={{ color: "hsl(30,40%,15%)" }}>
+              
+              <h3 className="font-bold text-base md:text-lg mb-2 text-[#3c2300] group-hover:text-[#e0a11d] transition-colors duration-300">
                 {item.title}
               </h3>
-              <p className="text-xs leading-relaxed" style={{ color: "hsl(30,25%,40%)" }}>
+              <p className="text-xs md:text-sm leading-relaxed text-[#60451a] group-hover:text-[#e0a11d]/80 transition-colors duration-500">
                 {item.desc}
               </p>
             </div>
