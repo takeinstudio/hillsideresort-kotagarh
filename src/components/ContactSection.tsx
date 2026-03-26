@@ -1,12 +1,25 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import SectionParticles from "./SectionParticles";
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="contact" className="section-padding bg-background" ref={ref}>
-      <div className="container mx-auto max-w-4xl">
+    <section
+      id="contact"
+      className="section-padding relative overflow-hidden"
+      ref={ref}
+      style={{
+        background: "linear-gradient(135deg, hsl(43,65%,92%) 0%, hsl(38,55%,86%) 50%, hsl(45,70%,90%) 100%)",
+      }}
+    >
+      <SectionParticles />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at 50% 40%, rgba(212,175,55,0.20) 0%, transparent 65%)", zIndex: 1 }}
+      />
+      <div className="container mx-auto max-w-4xl relative" style={{ zIndex: 2 }}>
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full bg-sage-light text-secondary-foreground text-sm font-medium tracking-wider uppercase mb-4">
             Get in Touch

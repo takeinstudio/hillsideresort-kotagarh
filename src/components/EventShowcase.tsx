@@ -5,6 +5,7 @@ import eventBirthday from "@/assets/event-birthday.jpg";
 import eventCorporate from "@/assets/event-corporate.jpg";
 import eventPrewedding from "@/assets/event-prewedding.jpg";
 import parkView from "@/assets/park-view.jpg";
+import SectionParticles from "./SectionParticles";
 
 const events = [
   { title: "Wedding & Reception", emoji: "💒", image: eventWedding, desc: "Grand celebrations in a stunning hillside setting" },
@@ -22,16 +23,41 @@ const EventShowcase = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="events" className="section-padding gradient-premium">
-      <div className="container mx-auto" ref={ref}>
+    <section
+      id="events"
+      className="section-padding relative overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, hsl(43,65%,92%) 0%, hsl(38,55%,86%) 50%, hsl(45,70%,90%) 100%)",
+      }}
+    >
+      {/* Floating golden sparks */}
+      <SectionParticles />
+
+      {/* Radial gold glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse at 50% 40%, rgba(212,175,55,0.20) 0%, transparent 65%)",
+          zIndex: 1,
+        }}
+      />
+
+      <div className="container mx-auto relative" style={{ zIndex: 2 }} ref={ref}>
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium tracking-wider uppercase mb-4">
+          <span
+            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-wider uppercase mb-4"
+            style={{
+              background: "rgba(180,120,0,0.12)",
+              border: "1px solid rgba(180,120,0,0.30)",
+              color: "hsl(36,70%,30%)",
+            }}
+          >
             Our Services
           </span>
-          <h2 className="section-title text-foreground">
+          <h2 className="section-title" style={{ color: "hsl(30,40%,15%)" }}>
             Premium <span className="text-gradient-gold">Event Experiences</span>
           </h2>
-          <p className="section-subtitle mt-4">
+          <p className="section-subtitle mt-4" style={{ color: "hsl(30,25%,35%)" }}>
             From grand weddings to intimate celebrations, we craft unforgettable moments in nature's embrace
           </p>
         </div>
