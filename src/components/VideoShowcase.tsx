@@ -3,10 +3,10 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { X, ExternalLink, Play } from "lucide-react";
 import SectionParticles from "./SectionParticles";
 
-const MAIN_VIDEO_ID = "W3_NkGKGCN8";
+const MAIN_VIDEO_ID = "1meuax9-Tyk";
 
 const relatedVideos = [
-  { id: "W3_NkGKGCN8", title: "Kotagarh Park – Overview" },
+  { id: "1meuax9-Tyk", title: "Kotagarh Park – Overview" },
   { id: "dAcrOe24BM0", title: "Kotagarh Park – Scenic Views" },
   { id: "KjFYDkyql68", title: "Kotagarh Park – Nature Walk" },
   { id: "MzL5VHahqh0", title: "Kotagarh Park – Highlights" },
@@ -70,9 +70,8 @@ const VideoShowcase = () => {
 
           {/* 4 related videos in one row */}
           <div
-            className={`grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto mb-10 ${
-              isVisible ? "animate-fade-in-up" : "opacity-0"
-            }`}
+            className={`grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto mb-10 ${isVisible ? "animate-fade-in-up" : "opacity-0"
+              }`}
             style={{ animationDelay: "200ms", animationFillMode: "forwards" }}
           >
             {relatedVideos.map((v) => (

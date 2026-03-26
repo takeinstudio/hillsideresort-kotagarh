@@ -1,3 +1,4 @@
+import Preloader from "@/components/Preloader";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import EventShowcase from "@/components/EventShowcase";
@@ -15,6 +16,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Preloader />
       <Navbar />
       <HeroSection />
       <EventShowcase />
