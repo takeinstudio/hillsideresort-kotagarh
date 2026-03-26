@@ -55,12 +55,22 @@ const Preloader = () => {
 
         {/* Spaced Subtext */}
         <div 
-          className="text-[10px] md:text-xs font-bold tracking-[0.6em] uppercase text-[#e0a11d] mb-12 opacity-0"
+          className="text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-[#e0a11d] mb-2 opacity-0"
           style={{ 
             animation: "preloader-fade-in-up 0.8s ease-out 0.3s forwards",
           }}
         >
-          K O T A G A R H &nbsp; P A R K
+          Kotagarh Park &amp; Resort
+        </div>
+
+        {/* Third Line: Premium Event Destination */}
+        <div 
+          className="text-[8px] md:text-[9px] font-medium tracking-[0.3em] uppercase text-white/60 mb-12 opacity-0"
+          style={{ 
+            animation: "preloader-fade-in-up 0.8s ease-out 0.5s forwards",
+          }}
+        >
+          Premium Event Destination
         </div>
 
         {/* Progress Container */}
