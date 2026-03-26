@@ -113,10 +113,10 @@
     transform: translateY(-4px);
   }
   .section-padding {
-    @apply py-20 md:py-28 px-4 md:px-8;
+    @apply py-16 md:py-24 px-4 md:px-8;
   }
   .section-title {
-    @apply text-3xl md:text-5xl font-bold tracking-tight;
+    @apply text-3xl md:text-[2.75rem] font-bold tracking-tight;
     font-family: 'Playfair Display', serif;
   }
   .section-subtitle {

@@ -36,7 +36,7 @@ const Footer = () => {
               className="text-xs tracking-[0.2em] uppercase mb-4 font-medium"
               style={{ color: "hsl(36,60%,38%)" }}
             >
-              Kotagarh Park &amp; Kalyan Mandap
+              Kotagarh Park &amp; Resort
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "hsl(30,30%,35%)" }}>
               Where celebrations meet nature. A premium event destination in the heart of Odisha.

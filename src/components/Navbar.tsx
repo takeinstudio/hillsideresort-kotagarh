@@ -2,19 +2,19 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Home",       href: "#hero" },
-  { label: "Events",     href: "#events" },
+  { label: "Home", href: "#hero" },
+  { label: "Events", href: "#events" },
   { label: "Facilities", href: "#facilities" },
-  { label: "Gallery",    href: "#gallery" },
-  { label: "Pricing",    href: "#pricing" },
-  { label: "Booking",    href: "#booking" },
-  { label: "Contact",    href: "#contact" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Booking", href: "#booking" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
-  const [scrolled, setScrolled]     = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [active, setActive]         = useState("#hero");
+  const [active, setActive] = useState("#hero");
 
   // Track scroll position for docked vs floating state
   useEffect(() => {
@@ -46,32 +46,31 @@ const Navbar = () => {
     <>
       {/* ── Desktop dock navbar ── */}
       <div
-        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "top-0 mx-4 mt-0" : "top-0 mx-0"
-        }`}
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "top-0 mx-4 mt-0" : "top-0 mx-0"
+          }`}
       >
         <nav
           className="flex items-center justify-between px-5 transition-all duration-500"
           style={
             scrolled
               ? {
-                  background:
-                    "linear-gradient(135deg, hsl(43,70%,88%) 0%, hsl(38,60%,82%) 100%)",
-                  borderRadius: 16,
-                  padding: "8px 28px",
-                  boxShadow:
-                    "0 4px 24px rgba(180,130,0,0.22), 0 1px 0 rgba(255,255,255,0.6) inset",
-                  border: "1px solid rgba(212,175,55,0.35)",
-                }
+                background:
+                  "linear-gradient(135deg, hsl(43,70%,88%) 0%, hsl(38,60%,82%) 100%)",
+                borderRadius: 16,
+                padding: "8px 28px",
+                boxShadow:
+                  "0 4px 24px rgba(180,130,0,0.22), 0 1px 0 rgba(255,255,255,0.6) inset",
+                border: "1px solid rgba(212,175,55,0.35)",
+              }
               : {
-                  background:
-                    "linear-gradient(135deg, hsl(43,70%,88%) 0%, hsl(38,60%,82%) 100%)",
-                  borderBottom: "1px solid rgba(212,175,55,0.35)",
-                  borderRadius: 0,
-                  padding: "10px 24px",
-                  boxShadow:
-                    "0 2px 16px rgba(180,130,0,0.15), 0 1px 0 rgba(255,255,255,0.5) inset",
-                }
+                background:
+                  "linear-gradient(135deg, hsl(43,70%,88%) 0%, hsl(38,60%,82%) 100%)",
+                borderBottom: "1px solid rgba(212,175,55,0.35)",
+                borderRadius: 0,
+                padding: "10px 24px",
+                boxShadow:
+                  "0 2px 16px rgba(180,130,0,0.15), 0 1px 0 rgba(255,255,255,0.5) inset",
+              }
           }
         >
           {/* Logo */}
@@ -83,7 +82,7 @@ const Navbar = () => {
               className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase leading-none mt-0.5"
               style={{ color: scrolled ? "rgba(60,35,0,0.65)" : "rgba(60,35,0,0.65)" }}
             >
-              Kotagarh Park &amp; Kalyan Mandap
+              Kotagarh Park &amp; Resort
             </span>
           </a>
 

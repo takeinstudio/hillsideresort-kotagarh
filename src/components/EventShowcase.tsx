@@ -45,11 +45,11 @@ const EventShowcase = () => {
       <div className="container mx-auto relative" style={{ zIndex: 2 }} ref={ref}>
         <div className="text-center mb-16">
           <span
-            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-wider uppercase mb-4"
+            className="inline-block px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4 shadow-lg shadow-amber-900/20"
             style={{
-              background: "rgba(180,120,0,0.12)",
-              border: "1px solid rgba(180,120,0,0.30)",
-              color: "hsl(36,70%,30%)",
+              background: "#e0a11d",
+              color: "black",
+              border: "none",
             }}
           >
             Our Services
